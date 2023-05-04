@@ -5,18 +5,6 @@ const Redis = require('ioredis')
 
 var client = new Redis();
 
-//
-// Shit from Stack overflow
-//  https://stackoverflow.com/questions/70896392/clientclosederror-the-client-is-closed-error-in-node-js-with-docker-and-redis
-// 
-// (async () => {
-//   client.connect();
-// })();
-
-// client.on('error', (err) => {
-//   console.error(err);
-// });
-
 client.mset({
     header: 0,
     left: 0,
